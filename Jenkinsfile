@@ -21,6 +21,7 @@ pipeline {
         stage('Setup Environment'){
             steps{
                 script{
+                    def packageJson = readJSON file: 'package.json'
                     appVersion = packageJson.version
                     environment = params.deploy_to
                 }
