@@ -24,7 +24,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: "{{ .Values.deployment.image_URL }}:{{ .Values.deployment.version }}"
+        image: joindevops/backend:1.0.0 #"{{ .Values.deployment.image_URL }}:{{ .Values.deployment.version }}"
         resources:
           cpu: 100m
           memory: 128Mi
