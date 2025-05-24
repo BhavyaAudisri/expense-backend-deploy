@@ -5,7 +5,7 @@ pipeline {
         COMPONENT = 'backend' 
         DEPLOY_TO = "production"
         REGION = "us-east-1"
-        appVersion = 'version'
+        appVersion = ''
         environment = ''
     }
     options {
@@ -21,7 +21,7 @@ pipeline {
         stage('Setup Environment'){
             steps{
                 script{
-                    appVersion = "${appVersion}"
+                    appVersion = packageJson.version
                     environment = params.deploy_to
                 }
             }
