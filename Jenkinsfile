@@ -43,7 +43,7 @@ pipeline {
                 }
             }
         }
-        stage('Functional Tests') {
+        /* stage('Functional Tests') {
             when{
                 expression { params.deploy_to == 'dev'}
             }
@@ -57,7 +57,7 @@ pipeline {
                     
                 }
             }
-        }
+        } */
 
         stage('Functional Tests') {
             when{
