@@ -45,6 +45,7 @@ pipeline {
                             elif [ ${params.ACTION} == 'destroy' ]
                             then
                             helm uninstall $COMPONENT -n $PROJECT
+                            fi
                         """
                     }
                 }
