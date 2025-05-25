@@ -33,7 +33,7 @@ pipeline {
             
             steps {
                 script{
-                    withAWS(region: 'us-east-1', credentials: "AWS-CREDS-${environment}") {
+                    withAWS(region: 'us-east-1', credentials: "AWS-CREDS") {
                         sh """
                             if [ ${params.ACTION} == 'apply' ]
                             then
